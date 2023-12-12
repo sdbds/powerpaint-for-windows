@@ -1,0 +1,9 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+controlnet-aux
+diffusers==0.23.1
+gradio==3.41.0
+mmengine
+opencv-python
+torch
+torchvision
+transformers

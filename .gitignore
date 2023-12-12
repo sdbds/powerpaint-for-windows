@@ -1,0 +1,11 @@
+__pycache__
+.vscode
+samples
+src
+third_party
+*.nfs*
+./*.png
+./*.mp4
+huggingface/
+venv/
+models/
