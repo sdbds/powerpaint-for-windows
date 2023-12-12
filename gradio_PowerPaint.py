@@ -4,6 +4,7 @@ import cv2
 import gradio as gr
 import numpy as np
 import torch
+from safetensors.torch import load_file
 from controlnet_aux import HEDdetector, OpenposeDetector
 from diffusers.pipelines.controlnet.pipeline_controlnet import ControlNetModel
 from PIL import Image, ImageFilter
@@ -34,7 +35,7 @@ add_tokens(
     initialize_tokens=['a', 'a', 'a'],
     num_vectors_per_token=10)
 pipe.unet.load_state_dict(
-    torch.load('./models/unet/diffusion_pytorch_model.bin'), strict=False)
+    load_file('./models/unet/diffusion_pytorch_model.safetensors', device='cuda'), strict=False)
 pipe.text_encoder.load_state_dict(
     torch.load('./models/text_encoder/pytorch_model.bin'), strict=False)
 pipe = pipe.to('cuda')

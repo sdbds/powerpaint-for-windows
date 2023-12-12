@@ -3,8 +3,8 @@ Set-Location $PSScriptRoot
 
 $Env:HF_HOME = "./huggingface"
 $Env:XFORMERS_FORCE_DISABLE_TRITON = "1"
-#$Env:PYTHONPATH = $PSScriptRoot
+$Env:PYTHONPATH = $PSScriptRoot
 
 $laungh_script = "gradio_PowerPaint"
 
-python.exe "demo/$laungh_script.py"
+python.exe "$laungh_script.py"
