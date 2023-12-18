@@ -9,7 +9,7 @@ if (!(Test-Path -Path "venv")) {
 .\venv\Scripts\activate
 
 Write-Output "Installing deps..."
-pip install -U -r requirements-windows.txt -i https://mirror.baidu.com/pypi/simple
+pip install -r requirements-windows.txt -i https://mirror.baidu.com/pypi/simple
 
 Write-Output "Checking models..."
 
